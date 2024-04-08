@@ -9,4 +9,9 @@ export class Tab2Page {
 
   constructor() {}
 
+  count: number = 0;
+  
+  incrementCounter(){
+    this.count++;
+  }
 }

@@ -28,9 +28,11 @@
 
     <ion-checkbox class="ion-checkbox" labelPlacement="end" >Remain logged in</ion-checkbox>
   
-    <ion-button routerLink="/account" color="success" shape="round" size="large" class="login-button">
+    <ion-button (click)="incrementCounter()" color="success" shape="round" size="large" class="login-button">
       <span style="color: white;">Login</span> 
       <ion-icon name="log-in-outline" style="color: white;"></ion-icon>
     </ion-button>
+
+    <span>{{ count }}</span>
 
 </ion-content>
