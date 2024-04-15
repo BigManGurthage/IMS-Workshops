@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-tab2',
@@ -6,12 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor() {}
-
   count: number = 0;
-  
-  incrementCounter(){
-    this.count++;
+  username: string = '';
+
+  constructor(private router: Router) {}
+
+  login() {
+    this.router.navigateByUrl(`/account/${this.username}`); // Use backticks for string interpolation
   }
+  
 }
